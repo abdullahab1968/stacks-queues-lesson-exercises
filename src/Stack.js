@@ -9,8 +9,11 @@ class Stack{
         this.stack[this.length++] = x
     }
     pop(){ 
+        if(this.isEmpty()){
+            return null
+        }
         this.length--
-        return this.stack[this.length]
+        return delete this.stack[this.length]
     }
     peek(){
         return this.stack[this.length - 1] || null
